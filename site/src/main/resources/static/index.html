@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Tecnologias | Técnico em ADS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho / Navegação -->
+    <header class="header">
+        <div class="container nav-container">
+            <h1 class="logo">DevPortfolio<span>.ads</span></h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#sobre">Sobre Mim</a></li>
+                    <li><a href="#tecnologias">Tecnologias</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" class="btn-theme">🌙 Alternar Tema</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Seção Perfil / Sobre Mim -->
+        <section id="sobre" class="section perfil-section">
+            <div class="perfil-info">
+                <h2>Olá, sou Estudante de ADS 👋</h2>
+                <p>
+                    Atualmente cursando o ensino <strong>Técnico em Análise e Desenvolvimento de Sistemas</strong>. 
+                    Tenho foco em desenvolvimento Full Stack, aplicando conceitos de lógica de programação, 
+                    arquitetura de software e banco de dados em projetos práticos.
+                </p>
+                <div class="badges">
+                    <span class="badge">Front-end</span>
+                    <span class="badge">Back-end (Java/Spring)</span>
+                    <span class="badge">Bancos de Dados</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filtros de Pesquisa -->
+        <section id="tecnologias" class="section">
+            <h2>Tecnologias & Ferramentas</h2>
+            <p class="subtitle">Conhecimentos adquiridos durante a trajetória no curso.</p>
+
+            <div class="filtros">
+                <button class="btn-filter active">Todas</button>
+                <button class="btn-filter">Linguagens</button>
+                <button class="btn-filter">Frameworks / Libs</button>
+                <button class="btn-filter">Bancos de Dados</button>
+                <button class="btn-filter">IDEs & Ferramentas</button>
+            </div>
+
+            <!-- Grid de Tecnologias -->
+            <div class="tech-grid">
+                <!-- Card Exemplo 1 -->
+                <div class="tech-card" data-category="Linguagens">
+                    <div class="card-header">
+                        <h3>Java</h3>
+                        <span class="tech-level nivel-avancado">Avançado</span>
+                    </div>
+                    <span class="category-tag">Linguagem</span>
+                    <p>Utilizado no desenvolvimento Back-end com POO, APIs RESTful e Spring Boot.</p>
+                </div>
+
+                <!-- Card Exemplo 2 -->
+                <div class="tech-card" data-category="Frameworks / Libs">
+                    <div class="card-header">
+                        <h3>Spring Boot</h3>
+                        <span class="tech-level nivel-intermediario">Intermediário</span>
+                    </div>
+                    <span class="category-tag">Framework</span>
+                    <p>Criação de microserviços, integração com bancos de dados via JPA/Hibernate e Injeção de Dependências.</p>
+                </div>
+
+                <!-- Card Exemplo 3 -->
+                <div class="tech-card" data-category="Bancos de Dados">
+                    <div class="card-header">
+                        <h3>PostgreSQL</h3>
+                        <span class="tech-level nivel-intermediario">Intermediário</span>
+                    </div>
+                    <span class="category-tag">Banco de Dados</span>
+                    <p>Modelagem relacional, consultas SQL, joins e integração com a aplicação backend.</p>
+                </div>
+
+                <!-- Card Exemplo 4 -->
+                <div class="tech-card" data-category="Linguagens">
+                    <div class="card-header">
+                        <h3>JavaScript</h3>
+                        <span class="tech-level nivel-intermediario">Intermediário</span>
+                    </div>
+                    <span class="category-tag">Linguagem</span>
+                    <p>Manipulação de DOM, consumo de APIs Fetch/Axios e dinamismo de interface.</p>
+                </div>
+
+                <!-- Card Exemplo 5 -->
+                <div class="tech-card" data-category="IDEs & Ferramentas">
+                    <div class="card-header">
+                        <h3>VS Code & Eclipse</h3>
+                        <span class="tech-level nivel-avancado">Avançado</span>
+                    </div>
+                    <span class="category-tag">IDE / Ferramenta</span>
+                    <p>Ambientes de desenvolvimento utilizados para front-end, Java e gerenciamento de projetos Git.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section id="contato" class="section contato-section">
+            <h2>Entre em Contato</h2>
+            <form class="form-contato">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 - Desenvolvido por um estudante de Análise e Desenvolvimento de Sistemas.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script simples para alternar o modo escuro via classe no <body>
+        const toggleBtn = document.getElementById('theme-toggle');
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
